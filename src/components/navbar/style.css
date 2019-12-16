@@ -1,0 +1,15 @@
+.brand-logo img{
+    width: 100px;
+    height: 70px;
+}
+.padding{
+    padding: 2.5rem;
+}
+.menu{    
+    font-weight: bold;
+    color: grey;
+    transition: 0.3s;
+}
+.menu:hover{
+    color:orange;
+}

@@ -1,0 +1,11 @@
+.firstsec{
+    padding-left: 5%;
+}
+.titleCost{
+    font-weight: bold;
+}
+.rightsec{
+    border: black solid 1px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}

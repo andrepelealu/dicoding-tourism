@@ -1,0 +1,14 @@
+.offer img{
+    padding: 2.5rem;
+    border: goldenrod solid 1px;
+    border-radius: 1.8rem; 
+}
+.offer img:hover{
+   
+   transition:  0.3s;
+   box-shadow: 5px 6px khaki;
+}
+
+.offersec{
+    padding-top: 2rem;
+}
