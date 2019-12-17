@@ -12,18 +12,19 @@ function Searchbar(){
             <div className="row">
                 <div className="input-field col s12">
                 
-                <div class="nav-wrapper">
-                    <form>
-                        <div class="input-field">
+                <div className="nav-wrapper">
+                    
+                        <div className="input-field">
                         <input placeholder="Labuan Bajo" id="search" type="search" required/>
-                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                        <i class="material-icons">close</i>
+                        <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
+                        <i className="material-icons">close</i>
                         </div>
-                    </form>
+                    
                 </div>
                 
-                <button className="btn waves-effect waves-light col s12 center m12 orange" type="submit" name="action">Cari
-                    </button>
+                <a href="/search" className="btn waves-effect waves-light col s12 center m12 orange" type="submit" name="action">
+                    Cari
+                    </a>
 
                 </div>
             </div>
