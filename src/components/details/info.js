@@ -14,34 +14,7 @@ function Info(){
                         <p>Deskripsi: </p>
                         
                     </div>
-                    <div className="col s8">
-                        <span className="keyword">Form Booking</span> 
-                        <div class="row">
-                            <form class="col s12" action="#">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                <input id="nama" type="text" class="validate"/>
-                                <label for="nama">Nama Lengkap</label>
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="input-field col s12">
-                                <input id="password" type="text" class="validate"/>
-                                <label for="password">Nomor Handphone</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                <input id="email" type="email" class="validate"/>
-                                <label for="email">Email</label>
-                                </div>
-                            </div>
-                            <button class="waves-effect waves-light btn orange" type="submit">Cusss !</button>
-                            </form>
-                        </div>
-
-                    </div>
+                 
                 </div>
             </div>
         </div>

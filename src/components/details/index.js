@@ -10,7 +10,7 @@ function Details(){
                 <div className="firstsec">
                     <div className="col s12 m12">
                         <h4>Labuan Bajo : Cultural Trip Indonesia Timur</h4>
-                        <iframe className="video" width="560" height="315" src="https://www.youtube.com/embed/RaTWq98hzF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    </div>
+                        <iframe title="promo_vid" className="video" width="560" height="315" src="https://www.youtube.com/embed/RaTWq98hzF0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>                    </div>
                 </div>
 
                 <div className="secondsec">

@@ -1,50 +1,45 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 
 function Cost(){
     const [person,setPerson]= useState('')
     const [hotel,setHotel]= useState('')
     const [day,setDay]= useState('')
-    const [transport,setTransport]= useState('')
-    const [guide,setGuide]= useState('')
-    var tranportCost;
-    var hotelCost;
-    var GuideCost=100000
-   console.log(person)
-   console.log(hotel)
-   console.log(day)
-   console.log(transport)
+    var tranportCost=0;
+    var hotelCost=0;
+  
 
    const total=()=>{
-        if(hotel==1){
+        if(hotel==='1'){
             hotelCost=500000
-        }else if(hotel==2){
+        }else if(hotel==='2'){
             hotelCost=350000
-        }else if(hotel==3){
+        }else if(hotel==='3'){
             hotelCost=150000
         }
 
-        if(person==1){
-            tranportCost=150000
-        }else if(person ==2){
+        if(person==='1'){
+            tranportCost=200000
+        }else if(person==='2'){
+            tranportCost=100000
+        }else if(person==='3'){
             tranportCost=75000
-        }else if(person == 3){
-            tranportCost=50000
-        }else if(person == 4){
+        }else if(person==='4'){
             tranportCost=30000
-        }else {
+        }else if(person ==='5'){
             tranportCost=25000
         }
 
         
         return (
-            (tranportCost+hotelCost+GuideCost*day)
+            
+            (tranportCost+hotelCost)*day
         )
    }
     return(
         
         <div className="cost">
-            <div id="modal1" class="modal">
-                <div class="modal-content">
+            <div id="modal1" className="modal">
+                <div className="modal-content">
                     <h4>Dicoding x Indosat Ooredoo</h4>
                     <b>Dicoding Challange</b><br/>
                     <code>
@@ -56,8 +51,8 @@ function Cost(){
                     <b>AndrePelealu</b>
                     </code>
                 </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                <div className="modal-footer">
+                    <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
                 </div>
             </div>
             <div className="contentcost">
@@ -65,22 +60,22 @@ function Cost(){
                     <div className="col s12">
                         <div className="row">
                             <div className="col s12 m12">
-                            <ul class="collapsible">
+                            <ul className="collapsible">
                                 <li>
-                                <div class="collapsible-header"><i class="material-icons">warning</i><span className="keyword">Syarat dan Ketentuan</span></div>
-                                    <div class="collapsible-body">
+                                <div className="collapsible-header"><i className="material-icons">warning</i><span className="keyword">Syarat dan Ketentuan</span></div>
+                                    <div className="collapsible-body">
                                     <p>kontent</p>
                                     </div>
                                     </li>
                                     <li>
-                                    <div class="collapsible-header"><i class="material-icons">settings</i><span className="keyword">Atur Perjalanan</span></div>
-                                    <div class="collapsible-body">
+                                    <div className="collapsible-header"><i className="material-icons">settings</i><span className="keyword">Atur Perjalanan</span></div>
+                                    <div className="collapsible-body">
                                     <span className="keyword">Tanggal Keberangkatan</span>
-                                    <input type="text" class="datepicker"placeholder="cuss tanggal berapa ?"/>
-                                    <div class="input-field">
+                                    <input type="text" className="datepicker"placeholder="cuss tanggal berapa ?"/>
+                                    <div className="input-field">
                                     <span className="titleCost">Jumlah Orang</span>
-                                    <select id="Person" onChange={e=>setPerson(e.target.value)}>
-                                        <option value="" disabled selected >Berangkat Berapa Orang?</option>
+                                    <select id="Person" value ='0' onChange={e=>setPerson(e.target.value)}>
+                                        <option value="0" disabled>Berangkat Berapa Orang?</option>
                                         <option value="1">2</option>
                                         <option value="2">3-7</option>
                                         <option value="3">7-15</option>
@@ -88,19 +83,19 @@ function Cost(){
                                         <option value="5">25++</option>
                                     </select>
                                 </div>
-                                <div class="input-field">
+                                <div className="input-field">
                                     <span className="titleCost">Jenis Penginapan</span>
-                                    <select onChange={e=>setHotel(e.target.value)}>
-                                        <option value="" disabled selected>Mau penginapan yang gimana?</option>
+                                    <select value ='0' onChange={e=>setHotel(e.target.value)}>
+                                        <option value="0" disabled>Mau penginapan yang gimana?</option>
                                         <option value="1">Hotel</option>
                                         <option value="2">Homestay</option>
                                         <option value="3">Hostel</option>
                                     </select>
                                 </div>
-                                <div class="input-field">
+                                <div className="input-field">
                                     <span className="titleCost">Lama Trip</span>
-                                    <select onChange={e=>setDay(e.target.value)}>
-                                        <option value="" disabled selected>Mau nge-trip berapa lama?</option>
+                                    <select alue ='0' onChange={e=>setDay(e.target.value)}>
+                                        <option value="0" disabled>Mau nge-trip berapa lama?</option>
                                         <option value="1">1 Hari</option>
                                         <option value="3">3 Hari 2 Malam</option>
                                         <option value="4">4 Hari 3 Malam</option>
@@ -112,32 +107,32 @@ function Cost(){
                                     </div>
                                 </li>
                                 <li>
-                                <div class="collapsible-header"><i class="material-icons">airplanemode_active</i><span className="keyword">Form Booking</span></div>
-                                <div class="collapsible-body">
+                                <div className="collapsible-header"><i className="material-icons">airplanemode_active</i><span className="keyword">Form Booking</span></div>
+                                <div className="collapsible-body">
                                 <div className="">
                                      
-                                    <div class="row">
-                                        <form class="" action="#">
-                                        <div class="row">
-                                            <div class="input-field ">
-                                            <input id="nama" type="text" class="validate"/>
-                                            <label for="nama">Nama Lengkap</label>
+                                    <div className="row">
+                                        <form className="" action="#">
+                                        <div className="row">
+                                            <div className="input-field ">
+                                            <input id="nama" type="text" className="validate"/>
+                                            <label htmlFor="nama">Nama Lengkap</label>
                                             </div>
                                         </div>
                                     
-                                        <div class="row">
-                                            <div class="input-field ">
-                                            <input id="password" type="text" class="validate"/>
-                                            <label for="password">Nomor Handphone</label>
+                                        <div className="row">
+                                            <div className="input-field ">
+                                            <input id="password" type="text" className="validate"/>
+                                            <label htmlFor="password">Nomor Handphone</label>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="input-field ">
-                                            <input id="email" type="email" class="validate"/>
-                                            <label for="email">Email</label>
+                                        <div className="row">
+                                            <div className="input-field ">
+                                            <input id="email" type="email" className="validate"/>
+                                            <label htmlFor="email">Email</label>
                                             </div>
                                         </div>
-                                        <button class="waves-effect waves-light btn orange modal-trigger"  href="#modal1" type="submit">Cusss !</button>
+                                        <button className="waves-effect waves-light btn orange modal-trigger"  href="#modal1" type="submit">Cusss !</button>
                                         </form>
                                     </div>
 

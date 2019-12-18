@@ -6,8 +6,8 @@
                 <div className="col s12">
                     <b>Jelajah: </b>
                     <a href="/" className="menu">Beranda</a> |  
-                    <a href="#" className="menu"> Ketentuan</a> | 
-                    <a href="#" className="menu"> Kontak</a>
+                    <a href="/" className="menu"> Ketentuan</a> | 
+                    <a href="/" className="menu"> Kontak</a>
                 </div>
             </div>
         )
