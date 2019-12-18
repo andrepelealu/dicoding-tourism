@@ -29,7 +29,7 @@ function App() {
         <Route exact path='/' component={Promotion}/>
         <Route exact path='/details' component={Details}/>
         <Route exact path='/search' component={Search}/>
-        <Route exact path='/' component={Footer}/>
+        <Footer/>
     
       </div>
      

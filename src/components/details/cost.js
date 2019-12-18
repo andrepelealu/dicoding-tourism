@@ -29,10 +29,15 @@ function Cost(){
             tranportCost=25000
         }
 
-        
+        const formatter = new Intl.NumberFormat('id-ID', {
+            style: 'currency',
+            currency: 'IDR',
+            minimumFractionDigits: 2
+          })
+          
         return (
             
-            (tranportCost+hotelCost)*day
+            formatter.format(tranportCost+hotelCost*day)
         )
    }
     return(
@@ -64,7 +69,25 @@ function Cost(){
                                 <li>
                                 <div className="collapsible-header"><i className="material-icons">warning</i><span className="keyword">Syarat dan Ketentuan</span></div>
                                     <div className="collapsible-body">
-                                    <p>kontent</p>
+                                        <b>Meeting Point: Bandar Udara Komodo</b><br/>
+                                        <b>Rincian Biaya Yang Ditanggung : </b>
+                                        <ul>
+                                        <li>- Makan 3x Sehari</li>
+                                        <li>- Tiket Masuk Wisata</li>
+                                        <li>- Asuransi</li>
+                                        <li>- Transportasi</li>
+                                        <li>- Tour Guide</li>
+                                        <li>- Penginapan</li>
+                                        </ul>
+                                        <b>Rincian Biaya Yang Tidak Ditanggung : </b>
+                                        <ul>
+                                        <li>- Makan diluar paket</li>
+                                        <li>- Tip Driver</li>
+                                        <li>- Tiket Pesawat Menuju Meeting Point</li>
+                                        <li>- Oleh-Oleh</li>
+                                
+                                        </ul>
+                                        
                                     </div>
                                     </li>
                                     <li>
@@ -74,8 +97,8 @@ function Cost(){
                                     <input type="text" className="datepicker"placeholder="cuss tanggal berapa ?"/>
                                     <div className="input-field">
                                     <span className="titleCost">Jumlah Orang</span>
-                                    <select id="Person" value ='0' onChange={e=>setPerson(e.target.value)}>
-                                        <option value="0" disabled>Berangkat Berapa Orang?</option>
+                                    <select id="Person"  onChange={e=>setPerson(e.target.value)}>
+                                        <option value="0">Berangkat Berapa Orang?</option>
                                         <option value="1">2</option>
                                         <option value="2">3-7</option>
                                         <option value="3">7-15</option>
@@ -85,8 +108,8 @@ function Cost(){
                                 </div>
                                 <div className="input-field">
                                     <span className="titleCost">Jenis Penginapan</span>
-                                    <select value ='0' onChange={e=>setHotel(e.target.value)}>
-                                        <option value="0" disabled>Mau penginapan yang gimana?</option>
+                                    <select  onChange={e=>setHotel(e.target.value)}>
+                                        <option value="0">Mau penginapan yang gimana?</option>
                                         <option value="1">Hotel</option>
                                         <option value="2">Homestay</option>
                                         <option value="3">Hostel</option>
@@ -94,8 +117,8 @@ function Cost(){
                                 </div>
                                 <div className="input-field">
                                     <span className="titleCost">Lama Trip</span>
-                                    <select alue ='0' onChange={e=>setDay(e.target.value)}>
-                                        <option value="0" disabled>Mau nge-trip berapa lama?</option>
+                                    <select onChange={e=>setDay(e.target.value)}>
+                                        <option value="0">Mau nge-trip berapa lama?</option>
                                         <option value="1">1 Hari</option>
                                         <option value="3">3 Hari 2 Malam</option>
                                         <option value="4">4 Hari 3 Malam</option>
