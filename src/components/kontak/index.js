@@ -22,19 +22,19 @@ function Kontak(){
                             </div>
                         </div>
             <h5 className="center-align">Hubungi Kami</h5>
-            <div class="row">
-                <form class="col s12">
-                    <div class="input-field col s12">
-                            <input id="first_name" type="text" class="validate"/>
-                            <label for="first_name">Nama Kamu</label>
+            <div className="row">
+                <form className="col s12">
+                    <div className="input-field col s12">
+                            <input id="nama" type="text" className="validate"/>
+                            <label htmlFor="nama">Nama Kamu</label>
                     </div>
-                    <div class="input-field col s12">
-                            <input id="first_name" type="email" class="validate"/>
-                            <label for="first_name">Alamat Email</label>
+                    <div className="input-field col s12">
+                            <input id="email" type="email" className="validate"/>
+                            <label htmlFor="email">Alamat Email</label>
                     </div>
-                    <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Kenapa ??</label>
+                    <div className="input-field col s12">
+                        <textarea id="textarea1" className="materialize-textarea"></textarea>
+                        <label htmlFor="textarea1">Kenapa ??</label>
                     </div>
                     <button className="waves-effect waves-light btn orange modal-trigger"  href="#modal1" type="submit">Kirim</button>
 
