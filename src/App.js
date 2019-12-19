@@ -9,6 +9,8 @@ import Menu from './components/navbar/menu'
 import Promotion from './components/promotion'
 import Search from './components/searchResult'
 import Details from './components/details'
+import Kontak from './components/kontak'
+import Ketentuan from './components/ketentuan'
 import './App.css';
 import {Route} from 'react-router-dom'
 function App() {
@@ -29,6 +31,9 @@ function App() {
         <Route exact path='/' component={Promotion}/>
         <Route exact path='/details' component={Details}/>
         <Route exact path='/search' component={Search}/>
+        <Route exact path='/kontak' component={Kontak}/>
+        <Route exact path='/ketentuan' component={Ketentuan}/>
+
         <Footer/>
     
       </div>

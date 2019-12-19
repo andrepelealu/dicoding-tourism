@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 function Searchbar(){
      function submitSearch(e) {
          e.preventDefault()
@@ -22,10 +22,7 @@ function Searchbar(){
                     
                 </div>
                 
-                <a href="/search" className="btn waves-effect waves-light col s12 center m12 orange" type="submit" name="action">
-                    Cari
-                    </a>
-
+                <Link to='/search'className="btn waves-effect waves-light col s12 center m12 orange">Cari</Link>
                 </div>
             </div>
             </form>
